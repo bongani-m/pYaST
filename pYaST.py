@@ -1,9 +1,13 @@
 import os
+
+
 # create files for parent function
 def mk_parent_folder(parent_folder):
     f = open(parent_folder + '/run_server.py', 'w')
     f.close()
-# create files for secondary function    
+
+
+# create files for secondary function
 def mk_secordary_folder(secondary_folder):
     f = open(secondary_folder + '/__init__.py', 'w')
     f.close()
@@ -13,6 +17,8 @@ def mk_secordary_folder(secondary_folder):
     os.mkdir(static)
     templates = secondary_folder + '/' + 'templates'
     os.mkdir(templates)
+
+
 # setup function create folders
 def setup():
     proj_name = raw_input('So what would you like your project to be named?')
@@ -24,6 +30,8 @@ def setup():
     secondary_folder = parent_folder + '/' + proj_name
     os.mkdir(secondary_folder)
     mk_secordary_folder(secondary_folder)
+
+
 # inro text
 print "----------------------------------------------------"
 print "     Welcome to pYaST for flask: micro generator    "
